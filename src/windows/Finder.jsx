@@ -1,5 +1,6 @@
 import { WindowControls } from "#components";
 import { locations } from "#constants";
+import WindowWrapper from "#hoc/WindowWrapper";
 import useLocationStore from "#store/location";
 import useWindowStore from "#store/window";
 import clsx from "clsx";
@@ -25,13 +26,26 @@ const Finder = () => {
     ));
 
   const openItem = (item) => {
-    if (item.fileType === "pdf") return openWindow("resume");
-    if (item.kind === "folder") return setActiveLocation(item);
-    if (["fig", "url"].includes(item.fileType) && item.href)
-      return window.open(item.href, "_blank");
+    if (item.fileType === "pdf") {
+      return openWindow("resume");
+    }
 
-    openWindow(`${item.fileType}${item.kind},item `);
+    if (item.kind === "folder") {
+      return setActiveLocation(item);
+    }
+
+    if (["fig", "url"].includes(item.fileType) && item.href) {
+      return window.open(item.href, "_blank");
+    }
+
+    openWindow("txtfile", {
+      name: item.name,
+      image: item.image,
+      subtitle: item.subtitle,
+      description: item.description,
+    });
   };
+
   return (
     <>
       <div id="window-header">
@@ -45,11 +59,10 @@ const Finder = () => {
             <h3>Favorites</h3>
             <ul>{renderList(Object.values(locations))}</ul>
           </div>
-        </div>
-
-        <div>
-          <h3>Work</h3>
-          <ul>{renderList(locations.work.children)}</ul>
+          <div>
+            <h3>Work</h3>
+            <ul>{renderList(locations.work.children)}</ul>
+          </div>
         </div>
 
         <ul className="content">
@@ -68,4 +81,6 @@ const Finder = () => {
   );
 };
 
-export default Finder;
+const FinderWindow = WindowWrapper(Finder, "finder");
+
+export default FinderWindow;
