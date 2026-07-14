@@ -12,11 +12,42 @@ const Contact = () => {
       </div>
 
       <div className="p-5 space-y-5">
-        <img src="/images/adrian.jpg" className="w-20 rounded-full" />
+        <img src="/images/me.jpg" className="w-20 rounded-full" />
 
-        <h3>Let's Connect</h3>
-        <p>Got an idea? A bug to squash? Or just wanna talk tech? I'm in.</p>
+        <h3>Ajay Raj Pratap Singh</h3>
+        <p className="text-sm text-gray-600 -mt-4">
+          Full-Stack Developer · DevOps & Cloud Engineer · 3D Web Specialist
+        </p>
+        <p>Dehradun, India · +91-8433038283</p>
+        <p className="-my-2">
+          Got an idea? A bug to squash? Or just wanna talk tech? I'm in.
+        </p>
         <p>ajayrajnegi1608@gmail.com</p>
+
+        <div className="space-y-1 text-sm">
+          <p>
+            <span className="font-semibold">Resume:</span>{" "}
+            <a
+              href="https://resume.ajayhtml.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              resume.ajayhtml.online
+            </a>
+          </p>
+          <p>
+            <span className="font-semibold">Portfolio:</span>{" "}
+            <a
+              href="https://portfolio.ajayhtml.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              portfolio.ajayhtml.online
+            </a>
+          </p>
+        </div>
 
         <ul>
           {socials.map(({ id, bg, link, icon, text }) => (

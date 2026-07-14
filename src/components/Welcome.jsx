@@ -80,13 +80,13 @@ const Welcome = () => {
     <section id="welcome">
       <p ref={subtitleRef}>
         {renderText(
-          "Hey, I'm Ajay! Welcome to my",
+          "Full-Stack Developer · DevOps · 3D Web",
           "text-3xl font-georama",
           100
         )}
       </p>
       <h1 ref={titleRef} className="mt-7">
-        {renderText("portfolio", "text-9xl italic font-georama", 100)}
+        {renderText("Ajay Raj", "text-9xl italic font-georama", 100)}
       </h1>
       <div className="small-screen">
         <p>This portfolio is designed for desktop/tablet screens only.</p>

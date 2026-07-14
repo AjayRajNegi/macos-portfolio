@@ -19,15 +19,24 @@ const Resume = () => {
 
         <a
           download
-          href="/images/resume/resume.pdf"
+          href="/files/resume.pdf"
           className="cursor-pointer"
           title="Download resume"
         >
           <Download className="icon" />
         </a>
+        <a
+          href="https://resume.ajayhtml.online"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-blue-600 hover:underline ml-2"
+          title="View online resume"
+        >
+          resume.ajayhtml.online
+        </a>
       </div>
 
-      <Document file="/images/resume/resume.pdf">
+      <Document file="/files/resume.pdf">
         <Page pageNumber={1} renderTextLayer renderAnimationLayer />
       </Document>
     </>
