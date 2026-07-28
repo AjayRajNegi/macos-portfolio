@@ -333,7 +333,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Easy Lease",
+      name: "Grihya",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-20 left-80",
@@ -341,7 +341,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Easy Lease.txt",
+          name: "Grihya.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -356,11 +356,11 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "easylease.com",
+          name: "grihya.in",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://easelease.services",
+          href: "https://grihya.in",
           position: "top-10 right-20",
         },
         {
